@@ -1,0 +1,31 @@
+# Language setting
+language: python
+
+# Version number
+python:
+  - 2.6
+  - 2.7
+  - 3.2
+  - 3.3
+  - 3.4
+  - 3.5
+  - pypy
+  - ppy3
+  
+services:
+  - mysql
+  - postgres
+  - mongodb
+  - elasticsearch
+  - redis
+  - memcache
+  - rabbitmq
+  
+build:
+  pre_ci_boot:
+    image_name: drydock/u14pytpls
+    image_tag: prod
+    pull: true
+  
+  ci:
+    - python --version
