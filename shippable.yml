@@ -1,4 +1,3 @@
-
 # Language setting
 language: python
 
@@ -12,7 +11,26 @@ python:
   - 3.5
   - pypy
   - ppy3
+  
+services:
+  - mysql
+  - postgres
+  - mongodb
+  - elasticsearch
+  - redis
+  - memcache
+  - rabbitmq
+  - neo4j
+  - rethinkdb
+  - couchdb
 
 build:
+  pre_ci_boot:
+    image_name: drydock/u14pytall
+    image_tag: prod
+    pull: true
+  
   ci:
     - python --version
+
+
