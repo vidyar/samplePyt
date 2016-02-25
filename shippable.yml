@@ -12,7 +12,7 @@ python:
   - 3.5
   - pypy
   - ppy3
-
+  
 build:
   pre_ci_boot:
     image_name: drydock/u12pyt
