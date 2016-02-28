@@ -26,3 +26,4 @@ build:
   ci:
     - python --version
     - echo $A and $C and $key1
+    - if [ "$SHIPPABLE_PYTHON_VERSION" == "3.3" ]; then foobar; fi
