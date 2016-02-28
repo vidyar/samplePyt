@@ -11,12 +11,13 @@ python:
 env:
  global:
   - foo=bar
+  - secure: KzH0xTi6ZQAtE05yG48TFSsFUSGUxC8LZ+Y0APKN6+JkfftwRc9EW3nSPW3YWENJM1DGMdiJj/KzM0BjJ2JmeLOR2e5TsIj8RR/n0fQQ9AP/xQjqFHfSKiVSqaV3OwiKi+23+jBGh0G7M/+snx+NVOiK58bpCYg05mPwPGOQ9orku6SUZmZy1PTxGtm8s6SZ5Y5TBpWnbLygj3WDFdLxVWOgklgRSAD4fV3+heoUe3ifIcGcUT6oNggbwrYNzl7Vi/Too2cax/j+IJTklJPLKaG3+mGUAIlkJNk8oqTUG7xk/qU1kJoIE75QPo9q/jpQgdYzAop+01/jJgxp5MwaTQ==
  matrix:
   - A=B
-  - C=D
+  
  
 
 build:
   ci:
     - python --version
-    - echo $A and $C
+    - echo $A and $C and $key1
