@@ -9,8 +9,14 @@ python:
   - 3.5
 
 env:
- - foo=bar
+ global:
+  - foo=bar
+ matrix:
+  - A=B
+  - C=D
+ 
 
 build:
   ci:
     - python --version
+    - echo $A and $C
