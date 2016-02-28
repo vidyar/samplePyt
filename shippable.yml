@@ -15,7 +15,11 @@ env:
  matrix:
   - A=B
   
- 
+matrix:
+ exclude:
+   - 3.4
+   - 3.5
+   
 
 build:
   ci:
